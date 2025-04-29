@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>MediCare</title>
 </head>
@@ -66,6 +66,69 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     
+    <!--box-->
+    <div class="card-container" style="display: flex; gap: 20px; justify-content: center; margin: 20px;">
+    <div class="card">
+        <h3>Professional Staff</h3>
+        <p id="staff-short">
+        Our team is composed of skilled and certified professionals dedicated to your care.
+        </p>
+        <p id="staff-more" style="display: none;">
+        Each member of our staff undergoes rigorous training and brings years of experience in their specialty. We are committed to compassionate, high-quality service tailored to every patient.
+        </p>
+        <button id="staff-read-more">READ MORE</button>
+    </div>
+
+  <div class="card">
+    <h3>Affordable Prices</h3>
+    <p id="price-short">
+      We offer top-quality services at prices that fit your budget.
+    </p>
+    <p id="price-more" style="display: none;">
+      Our pricing structure is transparent and designed to ensure accessibility for all. We regularly offer packages and discounts to keep healthcare affordable without cutting corners.
+    </p>
+    <button id="price-read-more">VIEW PRICELIST</button>
+  </div>
+
+  <div class="card">
+    <h3>Insurance Partners</h3>
+    <p id="short-text">
+      We partner with top insurance providers to give you smooth, worry-free coverage.
+    </p>
+    <p id="more-text" style="display: none;">
+      Our partners include major national and private insurers, offering a wide range of policies covering general, specialized, and emergency healthcare. We help simplify your claims and approvals for a stress-free experience.
+    </p>
+    <button id="read-more-btn">READ MORE</button>
+  </div>
+
+  <div class="card" id="doctor-card">
+    <h3>Consult our doctors</h3>
+    <div id="select-view">
+      <p>Select the doctor you prefer and book a visit with him or her in a matter of minutes.</p>
+      <select id="doctor-select">
+        <option>Choose a doctor</option>
+        <option>Dr. Devi Prasad Shetty</option>
+        <option>Dr. Naresh Trehan</option>
+        <option>Dr. Randeep Guleria</option>
+        <option>Dr. A. Velumani</option>
+        <option>Dr. Sudhansu Bhattacharyya</option>
+        <option>Dr. B. M. Hegde</option>
+        <option>Dr. Ashok Seth</option>
+        <option>Dr. Gagandeep Kang</option>
+        <option>Dr. Lalit Kant</option>
+        <option>Dr. N. K. Venkataramana</option>
+      </select>
+    </div>
+
+    <div id="detail-view" style="display: none;">
+      <p id="doctor-details" style="margin-top: 10px;"></p>
+      <button id="back-button" style="margin-top: 10px;">Back</button>
+      <button style="margin-left: 10px;"><a href="home.html">Book An Appointment</a></button>
+    </div>
+  </div>
+</div>
+
+
     <!--LAb Test-->
     <section class="lab-tests">
         <h2>Services</h2>

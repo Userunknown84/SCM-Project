@@ -38,6 +38,7 @@ main {
 .Topbar .search{
   padding-right: 1rem;
   border-radius: 1rem;
+  margin-right: 4rem;
   align-items: center;
   text-shadow: 0.5rem;
   position: relative;
@@ -312,6 +313,49 @@ main {
   cursor: pointer;
   font-size: 1.5rem;
 }
+/*Box*/
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+}
+
+.card {
+  background: deepskyblue;
+  color: white;
+  padding: 20px;
+  width: 23%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card button, .card select {
+  margin-top: 10px;
+  background: white;
+  color: #00b4a9;
+  border: 1px solid white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.card button a{
+  color: #00b4a9;
+}
+.card select {
+  width: 100%;
+}
+
 /*lab test*/
 .labtest{
   display: flex;
