@@ -29,18 +29,18 @@
                 <div class="dropdown-content" id="dropdowncontent">
                     <a href="Article.html">Article</a>
                     <a href="Blog.html">Blog</a>
-                    <a href="Images.html">Images</a>
                     
                   </div>
             </div>
         </ul>
 
-        <div class ="search">
+        <div class="search">
             <span>
-                <input type="text" placeholder="Looking for" >
+                <input type="text" id="search-input" placeholder="Looking for">
             </span>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass" id="search-icon" style="cursor: pointer;"></i>
         </div>
+        
     </div>
 
 
@@ -50,7 +50,7 @@
         <h1>We are a reliable partner</h1>
         <p>Providing quality healthcare with compassion and expertise.</p>
         <div class="buttons">
-            <button class="btn">Find a Doctor</button>
+            <a href="home.html" class="btn">Find a Doctor</a>
         </div>
     </div>
     <div class="doctor-image">
@@ -64,12 +64,23 @@
     </div>
     <div class="text-section">
         <h1>Welcome to Medicare</h1>
-        <p>At Medicare, we believe in compassionate and accessible healthcare for all. Our dedicated professionals are here to provide expert care, ensuring comfort and support in every medical journey.
-
-            From routine check-ups to specialized treatments, we prioritize your health and well-being.</p>
-        <button class="btn">View More</button>
+        <p>
+            At Medicare, we believe in compassionate and accessible healthcare for all.
+            Our dedicated professionals are here to provide expert care, ensuring comfort and support in every medical journey.
+                From routine check-ups to specialized treatments, we prioritize your health and well-being.
+            <span id="dots">...</span>
+            <span id="more" style="display: none;">
+                Medicare is your trusted partner in health, offering personalized and professional care for every stage of life.
+                We combine modern medical technology with a human touch to deliver reliable healthcare services.
+                Our team of skilled doctors and staff are committed to your well-being, comfort, and recovery.
+                Whether it’s preventive care or advanced treatments, Medicare ensures quality care that’s accessible and compassionate.
+                With a focus on patient-first values, Medicare continues to serve communities with integrity and excellence.
+            </span>
+        </p>
+        <button class="btn" onclick="toggleReadMore()" id="readBtn">Read More</button>
     </div>
 </div>
+
 
 <div class="about-section">
     <div class="text-content">
@@ -78,7 +89,8 @@
         <p>At Medicare, we blend expertise with compassion to ensure quality healthcare for every individual. Our dedicated professionals prioritize your well-being, offering personalized treatment and reliable medical support.
 
             With a commitment to accessibility and care, we strive to make healthcare simple, clear, and effective—just the way you need it.</p>
-        <button class="btn">Learn More</button>
+        <!-- <button class="btn">Learn More</button> -->
+        <a class="btn" href="About-Us.html">Learn More</a>
     </div>
     <div class="image-content">
         <img src="pic3.jpg" alt="Doctor">
@@ -86,30 +98,67 @@
 </div>
 
 
-
-    <div class="container">
-        <div class="column">
-            <h2>Professional staff</h2>
-            <p>Our team is skilled and experienced, and they work hard to give you the best service.</p>
-            <button>READ MORE</button>
-        </div>
-        <div class="column">
-            <h2>Affordable prices</h2>
-            <p>We offer reasonable prices, so you get great service without spending too much.</p>
-            <button>VIEW PRICELIST</button>
-        </div>
-        <div class="column">
-            <h2>Insurance partners</h2>
-            <p>We work with many insurance companies to give you good coverage and support.</p>
-            <button>READ MORE</button>
-        </div>
-        <div class="column">
-            <h2>Consult our doctors</h2>
-            <p>Select the doctor you prefer and book a visit.</p>
-            <button>CHOOSE A DOCTOR</button>
-        </div>
+<!--Doctor banner-->
+<div class="card-container" style="display: flex; gap: 20px; justify-content: center; margin: 20px;">
+    <div class="card">
+        <h3>Professional Staff</h3>
+        <p id="staff-short">
+            Our team is skilled and experienced, and they work hard to give you the best service.
+        </p>
+        <p id="staff-more" style="display: none;">
+        Each member of our staff undergoes rigorous training and brings years of experience in their specialty. We are committed to compassionate, high-quality service tailored to every patient.
+        </p>
+        <button id="staff-read-more">READ MORE</button>
     </div>
 
+  <div class="card">
+    <h3>Affordable Prices</h3>
+    <p id="price-short">
+        We offer reasonable prices, so you get great service without spending too much.
+    </p>
+    <p id="price-more" style="display: none;">
+      Our pricing structure is transparent and designed to ensure accessibility for all. We regularly offer packages and discounts to keep healthcare affordable without cutting corners.
+    </p>
+    <button id="price-read-more">VIEW PRICELIST</button>
+  </div>
+
+  <div class="card">
+    <h3>Insurance Partners</h3>
+    <p id="short-text">
+        We work with many insurance companies to give you good coverage and support.
+    </p>
+    <p id="more-text" style="display: none;">
+      Our partners include major national and private insurers, offering a wide range of policies covering general, specialized, and emergency healthcare. We help simplify your claims and approvals for a stress-free experience.
+    </p>
+    <button id="read-more-btn">READ MORE</button>
+  </div>
+
+  <div class="card" id="doctor-card">
+    <h3>Consult our doctors</h3>
+    <div id="select-view">
+      <p>Select the doctor you prefer and book a visit with him or her in a matter of minutes.</p>
+      <select id="doctor-select">
+        <option>Choose a doctor</option>
+        <option>Dr. Devi Prasad Shetty</option>
+        <option>Dr. Naresh Trehan</option>
+        <option>Dr. Randeep Guleria</option>
+        <option>Dr. A. Velumani</option>
+        <option>Dr. Sudhansu Bhattacharyya</option>
+        <option>Dr. B. M. Hegde</option>
+        <option>Dr. Ashok Seth</option>
+        <option>Dr. Gagandeep Kang</option>
+        <option>Dr. Lalit Kant</option>
+        <option>Dr. N. K. Venkataramana</option>
+      </select>
+    </div>
+
+    <div id="detail-view" style="display: none;">
+      <p id="doctor-details" style="margin-top: 10px;"></p>
+      <button id="back-button" style="margin-top: 10px;">Back</button>
+      <!-- <button style="margin-left: 10px;"><a href="home.html">Book An Appointment</a></button> -->
+    </div>
+  </div>
+</div>
     
     <!--LAb Test-->
     <section class="lab-tests">
@@ -178,16 +227,6 @@
                 <h3>Kidney Function Tests</h3>
                 <p>Evaluate kidney health through tests like serum creatinine and glomerular filtration rate (GFR).</p>
             </div>
-            <div class="test-item">
-                <img src="coag.avif"alt="Blood Test" class="test-image" />
-                <h3>Coagulation Tests</h3>
-                <p>Monitor blood clotting ability with tests like PT, INR, and aPTT to assess bleeding disorders.</p>
-            </div>
-            <div class="test-item">
-                <img src="allergy.png"alt="Blood Test" class="test-image" />
-                <h3>Allergy Testing</h3>
-                <p>Identify allergies through skin tests or blood tests to detect reactions to substances like pollen, dust, and foods.</p>
-            </div>
         </div>
         <div class="labtest">
             <a href="labtest.html">Lab Test</a>
@@ -198,66 +237,65 @@
 
     <!--Chat bot-->
     <div class="chat-icon" id="chat-icon">💬</div>
+
+    <!-- Chat Window -->
     <div class="chat-window" id="chat-window">
         <div class="chat-header">
             <h4>Chat with us</h4>
             <button id="clear" onclick="clearChat()">Clear</button>
             <span id="close-btn">&times;</span>
         </div>
-        <div class="chat-body" id="chat-body">
-        </div>
+        <div class="chat-body" id="chat-body"></div>
         <div class="chat-footer">
             <input type="text" id="user-input" placeholder="Type a message...">
             <button id="send-btn">➤</button>
         </div>
     </div>
 
+
     
 
 
     <!--Footer-->
     <footer>
-        <div class="footer">
-            <div class="info">
-                <p>Medical Health Care</p>
-                <p>All rights reserved &copy; 2025
-                <a href="PrivacyPolicy.html">Privacy Policy</a> 
-                <a href="Terms.html">Terms of Service</a>
-                <a href="FAQ.html">FAQs</a></p>
-                <p><a href="About-Us.html">About-Us</a></p>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>Medical Health Care</h3>
+                <p>All rights reserved &copy; 2025</p>
+                <div class="footer-links">
+                    <a href="PrivacyPolicy.html">Privacy Policy</a> |
+                    <a href="Terms.html">Terms of Service</a> |
+                    <a href="FAQ.html">FAQs</a> |
+                    <a href="About-Us.html">About Us</a>
+                </div>
             </div>
-            
-            <div class="contact-info">
-                <p><strong>Phone:</strong> +919656372834</p>
+    
+            <div class="footer-section contact">
+                <h3>Contact Info</h3>
+                <p><strong>Phone:</strong> +91 96563 72834</p>
                 <p><strong>Email:</strong> contact@medicalclinic.com</p>
                 <p><strong>Hours:</strong> Mon - Fri: 8am - 6pm</p>
-                <p><a href="contact.html">Contact</a></p>
+                <a href="contact.html">Contact Page</a>
             </div>
-           
-
-        <div class="h3">    
-            <h3>Follow Us </h3>
+    
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="x.png" alt="Twitter"></a>
+                    <a href="#"><img src="linkdin.png" alt="LinkedIn"></a>
+                </div>
+                <!-- <div class="social-text">
+                    <p>Instagram</p>
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>LinkedIn</p>
+                </div> -->
+            </div>
         </div>
-
-
-        <div class="social">
-            <img src="instagram.png" alt="Logo" height="60px" weight="40px">
-            <img src="facebook.png" alt="Logo" height="60px" weight="40px">
-            <img src="x.png" alt="Logo" height="60px" weight="40px">
-            <img src="linkdin.png" alt="Logo" height="60px" weight="40px">
-        </div>
-
-
-        <div class="link">
-            <p>Instagram</p>
-            <p>facebook</p>
-            <p>Twitter</p>
-            <p>LinkedIn</p>
-        </div>
-    </div>
-
-   
     </footer>
+    
 
     <script src="main.js">
     </script>

@@ -7,16 +7,37 @@
     <title>Home Page</title>
 </head>
 <body>
-    <!-- <div class="Topbar">
-            <h3>MediCare</h3> 
-            
-        <ul class="navlinks">
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="About-Us.html">About-Us</a></li>
-        </ul>
-        
-    </div> -->
+   <!-- Doctor Recommendations -->
+   <form class="BookAppointment">
+    <h2>Book An Appointment For Doctor</h2>
+    <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" >
 
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" >
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" required>
+            <option value="">-- Choose Doctor --</option>
+            <option>Dr. Devi Prasad Shetty</option>
+            <option>Dr. Naresh Trehan</option>
+            <option>Dr. Randeep Guleria</option>
+            <option>Dr. A. Velumani</option>
+            <option>Dr. Sudhansu Bhattacharyya</option>
+            <option>Dr. B. M. Hegde</option>
+            <option>Dr. Ashok Seth</option>
+            <option>Dr. Gagandeep Kang</option>
+            <option>Dr. Lalit Kant</option>
+            <option>Dr. N. K. Venkataramana</option>    
+
+        </select>
+
+        <button type="submit">Submit</button>
+</form>
+    
     
 </body>
 </html>

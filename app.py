@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify  # type: ignore
-import re  # For regular expressions
+from flask import Flask, request, jsonify 
+import re  
 # from flask_cors import CORS
 # CORS(app)
 
@@ -21,17 +21,14 @@ health_advice = {
 def medical_query():
     query = request.args.get('query', '').lower()
 
-    # First try exact substring matching
     for key in health_advice.keys():
         if key in query:
             return jsonify({"advice": health_advice[key]})
 
-    # Now try whole word match using regular expression
     for key, advice in health_advice.items():
         if re.search(r'\b' + re.escape(key) + r'\b', query):
             return jsonify({"advice": advice})
 
-    # If nothing matched
     return jsonify({"message": "Sorry, I couldn't find advice for that query. Please ask another question."}), 404
 
 if __name__ == '__main__':

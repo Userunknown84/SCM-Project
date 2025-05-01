@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedCare</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medical Portal Login</title>
+  <link rel="stylesheet" href="signup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   <h1>MedCare</h1>
-
-
-    
+<div class="container">
+    <div class="login-card">
+       <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/883/883407.png" alt="Medical Logo">
+      </div>
+      <h2>Medicare Portal</h2>
+      <p class="subtitle">Login to your account</p>
+      <form id="loginForm">
+        <div class="input-group">
+              <i class="fas fa-envelope"></i>
+          <input type="email" id="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="links">
+          <a href="#forgot-password" id="forgotPasswordLink">Forgot Password?</a> |
+          <a href="#" id="showSignUp">Sign Up</a>
+        </div>
+        <div id="error-message"></div>
+      </form>
+      <form id="signupForm" style="display: none;">
+        <h2>Create Account</h2>
+        <p class="subtitle">Sign up to access your portal</p>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="name" placeholder="Full Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="signupEmail" placeholder="Email Address" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="signupPassword" placeholder="Password" required>
+        </div>
+        <button type="submit" class="login-btn">Sign Up</button>
+        <div class="links">
+          <a href="#" id="showLogin">Already have an account? Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="sign.js"></script>
 </body>
 </html>
