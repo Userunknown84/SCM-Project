@@ -18,7 +18,7 @@ loginForm.addEventListener('submit', (e) => {
   const password = document.getElementById('password').value;
   if (email === "bhawna9615@gmail.com" && password === "123456") {
     alert("Login successful! Welcome to your medical portal.");
-    window.location.href = 'main.html';
+    window.location.href = 'index.html';
   } else {
     document.getElementById('error-message').innerText = "Invalid email or password!";
   }
